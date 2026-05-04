@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #0D1B2A;
+  --color-brand-cyan: #00A8E8;
+  --color-brand-grey: #F4F6F8;
+  --color-brand-white: #FFFFFF;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+}
+
+@layer base {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #0D1B2A;
+    --card: #FFFFFF;
+    --card-foreground: #0D1B2A;
+    --popover: #FFFFFF;
+    --popover-foreground: #0D1B2A;
+    --primary: #0D1B2A;
+    --primary-foreground: #FFFFFF;
+    --secondary: #00A8E8;
+    --secondary-foreground: #FFFFFF;
+    --muted: #F4F6F8;
+    --muted-foreground: #4B5563;
+    --accent: #F4F6F8;
+    --accent-foreground: #0D1B2A;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #E5E7EB;
+    --input: #E5E7EB;
+    --ring: #0D1B2A;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: #0D1B2A;
+    --foreground: #F4F6F8;
+    --card: #15273C;
+    --card-foreground: #F4F6F8;
+    --popover: #15273C;
+    --popover-foreground: #F4F6F8;
+    --primary: #00A8E8;
+    --primary-foreground: #0D1B2A;
+    --secondary: #F4F6F8;
+    --secondary-foreground: #0D1B2A;
+    --muted: #15273C;
+    --muted-foreground: #9CA3AF;
+    --accent: #15273C;
+    --accent-foreground: #F4F6F8;
+    --destructive: #7F1D1D;
+    --destructive-foreground: #FFFFFF;
+    --border: #1F2937;
+    --input: #1F2937;
+    --ring: #00A8E8;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
