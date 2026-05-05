@@ -1,68 +1,21 @@
-import { useEffect, useState } from "react"
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
+import { motion } from "framer-motion"
 import { Lightbulb, Shield, Award, HeartHandshake } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-
-function AnimatedStat({ value, label, suffix = "" }: { value: number, label: string, suffix?: string }) {
-  const [count, setCount] = useState(0)
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-
-  useEffect(() => {
-    if (isInView) {
-      let start = 0;
-      const duration = 2000;
-      const increment = value / (duration / 16);
-      
-      const timer = setInterval(() => {
-        start += increment;
-        if (start >= value) {
-          setCount(value);
-          clearInterval(timer);
-        } else {
-          setCount(Math.floor(start));
-        }
-      }, 16);
-
-      return () => clearInterval(timer);
-    }
-  }, [isInView, value]);
-
-  return (
-    <div ref={ref} className="text-center">
-      <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">
-        {count}{suffix}
-      </div>
-      <div className="text-primary-foreground/80 font-medium">{label}</div>
-    </div>
-  )
-}
+import { PageHero } from "@/components/sections/PageHero"
 
 export default function About() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-muted py-20 border-b">
-        <div className="container px-4 md:px-8 max-w-5xl mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="text-4xl md:text-5xl font-bold mb-6"
-          >
-            About <span className="text-primary">Ionnetix</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut", delay: 0.1 }}
-            className="text-lg text-muted-foreground"
-          >
-            We are a team of passionate technologists dedicated to connecting ideas and delivering innovation for businesses worldwide.
-          </motion.p>
-        </div>
-      </section>
+      <PageHero
+        title={
+          <>
+            About <span className="text-secondary">Ionnetix</span>
+          </>
+        }
+        description="We are a team of passionate technologists dedicated to connecting ideas and delivering innovation for businesses worldwide."
+        primaryAction={{ label: "Our Services", to: "/services" }}
+        secondaryAction={{ label: "Contact Us", to: "/contact" }}
+      />
 
       {/* Our Story / Mission */}
       <section className="py-20">
@@ -99,17 +52,6 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-transparent mix-blend-multiply" />
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Bar */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container px-4 md:px-8 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20">
-            <AnimatedStat value={50} suffix="+" label="Projects Delivered" />
-            <AnimatedStat value={20} suffix="+" label="Happy Clients" />
-            <AnimatedStat value={5} suffix="+" label="Years of Experience" />
           </div>
         </div>
       </section>

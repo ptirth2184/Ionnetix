@@ -3,31 +3,21 @@ import { motion } from "framer-motion"
 import { Code2, TrendingUp, Server, Bot, Search, PenTool, Terminal, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { PageHero } from "@/components/sections/PageHero"
 
 export default function Services() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-muted py-20 border-b">
-        <div className="container px-4 md:px-8 max-w-5xl mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="text-4xl md:text-5xl font-bold mb-6"
-          >
-            Our <span className="text-primary">Services</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut", delay: 0.1 }}
-            className="text-lg text-muted-foreground"
-          >
-            Comprehensive, end-to-end technology solutions tailored to accelerate your business growth.
-          </motion.p>
-        </div>
-      </section>
+      <PageHero
+        title={
+          <>
+            Our <span className="text-secondary">Services</span>
+          </>
+        }
+        description="Comprehensive, end-to-end technology solutions tailored to accelerate your business growth."
+        primaryAction={{ label: "Get in Touch", to: "/contact" }}
+        secondaryAction={{ label: "About Us", to: "/about" }}
+      />
 
       {/* Services Grid */}
       <section className="py-20">

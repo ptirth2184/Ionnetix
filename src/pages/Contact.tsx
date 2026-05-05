@@ -5,31 +5,21 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent } from "@/components/ui/card"
+import { PageHero } from "@/components/sections/PageHero"
 
 export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-muted py-20 border-b">
-        <div className="container px-4 md:px-8 max-w-5xl mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="text-4xl md:text-5xl font-bold mb-6"
-          >
-            Get In <span className="text-primary">Touch</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut", delay: 0.1 }}
-            className="text-lg text-muted-foreground"
-          >
-            Have a project in mind or need assistance? We're here to help. Reach out to us today.
-          </motion.p>
-        </div>
-      </section>
+      <PageHero
+        title={
+          <>
+            Get In <span className="text-secondary">Touch</span>
+          </>
+        }
+        description="Have a project in mind or need assistance? We're here to help. Reach out to us today."
+        primaryAction={{ label: "View Services", to: "/services" }}
+        secondaryAction={{ label: "About Us", to: "/about" }}
+      />
 
       {/* Main Content */}
       <section className="py-20 bg-background relative overflow-hidden">
@@ -38,14 +28,14 @@ export default function Contact() {
         <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 rounded-full bg-primary/5 blur-[80px] pointer-events-none" />
 
         <div className="container relative z-10 px-4 md:px-8 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 lg:items-start">
             
             {/* Left Column: Contact Details & Map */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              className="space-y-10"
+              className="space-y-10 lg:pt-14"
             >
               <div>
                 <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
@@ -111,17 +101,17 @@ export default function Contact() {
                   <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name</Label>
-                      <Input id="name" placeholder="John Doe" className="bg-muted/50 focus:bg-background transition-colors" />
+                      <Input id="name" className="bg-muted/50 focus:bg-background transition-colors" />
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" type="email" placeholder="john@example.com" className="bg-muted/50 focus:bg-background transition-colors" />
+                        <Input id="email" type="email" className="bg-muted/50 focus:bg-background transition-colors" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="phone">Phone Number</Label>
-                        <Input id="phone" type="tel" placeholder="+1 (555) 000-0000" className="bg-muted/50 focus:bg-background transition-colors" />
+                        <Input id="phone" type="tel" className="bg-muted/50 focus:bg-background transition-colors" />
                       </div>
                     </div>
 

@@ -8,7 +8,6 @@ const navLinks = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
-  { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
 ]
 
@@ -17,7 +16,7 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-full border-b border-border/80 bg-background text-foreground">
       <div className="container flex h-20 md:h-24 items-center justify-between px-4 md:px-8 max-w-7xl mx-auto">
         <Link to="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
           <img src={logoImage} alt="Ionnetix Logo" className="h-16 md:h-20 w-auto object-contain transform scale-110 md:scale-125 origin-left" />
@@ -47,7 +46,7 @@ export function Navbar() {
       
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden border-t bg-background">
+        <div className="md:hidden border-t border-border/80 bg-background">
           <div className="flex flex-col space-y-4 px-4 py-6">
             {navLinks.map((link) => (
               <Link
