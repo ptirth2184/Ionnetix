@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom"
+"use client"
+
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Code2, TrendingUp, Server, Bot, Search, PenTool, Terminal, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -19,7 +21,6 @@ export default function Services() {
         secondaryAction={{ label: "About Us", to: "/about" }}
       />
 
-      {/* Services Grid */}
       <section className="py-20">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -36,8 +37,8 @@ export default function Services() {
               },
               {
                 icon: Server,
-                title: "Domain & Hosting Services",
-                desc: "Reliable, secure, and affordable domain registration and hosting solutions to keep your website running 24/7. We offer scalable plans that grow with your business."
+                title: "App Development Services",
+                desc: "Reliable, scalable app development solutions to help you build modern digital products that perform smoothly and grow with your business."
               },
               {
                 icon: Bot,
@@ -72,7 +73,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Process Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -81,7 +81,6 @@ export default function Services() {
           </div>
           
           <div className="relative">
-            {/* Connecting line for desktop */}
             <div className="hidden md:block absolute top-12 left-0 w-full h-1 bg-primary-foreground/10" />
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -107,7 +106,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* CTA Strip */}
       <section className="py-16 bg-muted border-t border-border">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between bg-card p-8 md:p-12 rounded-2xl shadow-sm border border-border/50">
@@ -116,7 +114,7 @@ export default function Services() {
               <p className="text-muted-foreground text-lg">Let's talk about how we can help you achieve your goals.</p>
             </div>
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8">
-              <Link to="/contact">Let's Talk</Link>
+              <Link href="/contact">Let's Talk</Link>
             </Button>
           </div>
         </div>

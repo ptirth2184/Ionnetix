@@ -1,5 +1,8 @@
-import { Link, useLocation } from "react-router-dom"
+"use client"
+
 import { useState } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import logoImage from "./logo.png"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -12,29 +15,29 @@ const navLinks = [
 ]
 
 export function Navbar() {
-  const location = useLocation()
+  const pathname = usePathname()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border/80 bg-background text-foreground">
       <div className="container flex h-20 md:h-24 items-center justify-between px-4 md:px-8 max-w-7xl mx-auto">
-        <Link to="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
-          <img src={logoImage} alt="Ionnetix Logo" className="h-16 md:h-20 w-auto object-contain transform scale-110 md:scale-125 origin-left" />
+        <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
+          <img src={logoImage.src} alt="Ionnetix Logo" className="h-16 md:h-20 w-auto object-contain transform scale-110 md:scale-125 origin-left" />
         </Link>
         <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              to={link.path}
+              href={link.path}
               className={`text-sm font-medium transition-colors hover:text-secondary ${
-                location.pathname === link.path ? "text-secondary font-semibold" : "text-foreground/80"
+                pathname === link.path ? "text-secondary font-semibold" : "text-foreground/80"
               }`}
             >
               {link.name}
             </Link>
           ))}
           <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link to="/contact">Get a Free Consultation</Link>
+            <Link href="/contact">Get a Free Consultation</Link>
           </Button>
         </div>
         <div className="md:hidden">
@@ -51,17 +54,17 @@ export function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                to={link.path}
+                href={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`text-lg font-medium transition-colors hover:text-secondary ${
-                  location.pathname === link.path ? "text-secondary font-semibold" : "text-foreground/80"
+                  pathname === link.path ? "text-secondary font-semibold" : "text-foreground/80"
                 }`}
               >
                 {link.name}
               </Link>
             ))}
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full mt-4" onClick={() => setIsMobileMenuOpen(false)}>
-              <Link to="/contact">Get a Free Consultation</Link>
+              <Link href="/contact">Get a Free Consultation</Link>
             </Button>
           </div>
         </div>

@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion"
 import { Lightbulb, Shield, Award, HeartHandshake } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -17,7 +19,6 @@ export default function About() {
         secondaryAction={{ label: "Contact Us", to: "/contact" }}
       />
 
-      {/* Our Story / Mission */}
       <section className="py-20">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -56,7 +57,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Core Values */}
       <section className="py-20 bg-muted/30">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -94,7 +94,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
       <section className="py-20">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -106,7 +105,6 @@ export default function About() {
               { name: "Vishal Rathod", role: "Co-Founder & CEO", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=60" },
               { name: "Tirth Patel", role: "Co-Founder & CTO", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=60" },
               { name: "Vraj Shah", role: "Team Leader", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=60" }
-              
             ].map((member, i) => (
               <motion.div
                 key={i}

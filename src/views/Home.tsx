@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom"
+"use client"
+
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight, Users, Target, ShieldCheck, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -67,7 +69,7 @@ export default function Home() {
               <p className="text-muted-foreground">Comprehensive technology solutions designed to accelerate your growth and streamline your operations.</p>
             </div>
             <Button variant="ghost" asChild className="group text-primary">
-              <Link to="/services">
+              <Link href="/services">
                 View All Services 
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
@@ -78,7 +80,7 @@ export default function Home() {
             {[
               { title: "Web Development", desc: "Fast, responsive, and visually stunning websites." },
               { title: "Digital Marketing", desc: "Data-driven strategies to grow your online presence." },
-              { title: "Website Maintenance", desc: "Keep your website secure, up-to-date, and performing at its best." }
+              { title: "App Development", desc: "Innovative mobile applications for iOS and Android." }
             ].map((service, i) => (
               <motion.div
                 key={i}
@@ -88,7 +90,7 @@ export default function Home() {
                 <Card className="h-full overflow-hidden border-border/50">
                   <div className="h-48 bg-muted relative overflow-hidden">
                     <img 
-                      src={`https://images.unsplash.com/photo-${i === 0 ? '1498050108023-c5249f4df085' : i === 1 ? '1460925895917-afdab827c52f' : '1677442136019-21780ecad995'}?w=800&auto=format&fit=crop&q=60`} 
+                      src={`https://images.unsplash.com/photo-${i === 0 ? '1498050108023-c5249f4df085' : i === 1 ? '1460925895917-afdab827c52f' : '1551650975-87deedd944c3'}?w=800&auto=format&fit=crop&q=60`} 
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
@@ -115,7 +117,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to build something great?</h2>
           <p className="text-xl text-primary-foreground/80 mb-10">Let's discuss how Ionnetix Technologies can help you achieve your business goals.</p>
           <Button size="lg" asChild className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-8 py-6 text-lg">
-            <Link to="/contact">Let's Talk</Link>
+            <Link href="/contact">Let's Talk</Link>
           </Button>
         </div>
       </section>

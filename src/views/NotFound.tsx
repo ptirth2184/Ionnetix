@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import Link from "next/link"
 import { PageHero } from "@/components/sections/PageHero"
 import { Button } from "@/components/ui/button"
 
@@ -17,10 +17,10 @@ export default function NotFound() {
           <p className="text-muted-foreground mb-6">Try returning to the homepage or contact us if you need help.</p>
           <div className="flex justify-center gap-4">
             <Button asChild>
-              <Link to="/">Home</Link>
+              <Link href="/">Home</Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link to="/contact">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </Button>
           </div>
         </div>

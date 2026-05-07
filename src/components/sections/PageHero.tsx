@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom"
+"use client"
+
+import Link from "next/link"
 import { motion } from "framer-motion"
 import type { ReactNode } from "react"
 import { Button } from "@/components/ui/button"
@@ -73,12 +75,12 @@ export function PageHero({ title, description, primaryAction, secondaryAction }:
           >
             {primaryAction && (
               <Button size="lg" asChild className="w-full bg-secondary text-white hover:bg-secondary/90 sm:w-auto">
-                <Link to={primaryAction.to}>{primaryAction.label}</Link>
+                <Link href={primaryAction.to}>{primaryAction.label}</Link>
               </Button>
             )}
             {secondaryAction && (
               <Button size="lg" variant="outline" asChild className="w-full border-white/30 bg-white text-black hover:bg-secondary hover:text-white sm:w-auto">
-                <Link to={secondaryAction.to}>{secondaryAction.label}</Link>
+                <Link href={secondaryAction.to}>{secondaryAction.label}</Link>
               </Button>
             )}
           </motion.div>
