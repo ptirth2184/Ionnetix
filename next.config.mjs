@@ -4,6 +4,11 @@ import { fileURLToPath } from "node:url"
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const nextConfig = {
+  output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
   turbopack: {
     root: __dirname,
   },
