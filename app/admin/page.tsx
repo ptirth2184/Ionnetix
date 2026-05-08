@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 type Row = { row: number; values: string[] };
@@ -16,14 +16,16 @@ export default function AdminPage() {
   const [query, setQuery] = useState("");
   const [statusIndex, setStatusIndex] = useState<number>(-1);
   const [toasts, setToasts] = useState<Array<{ id: string; message: string; type?: "success" | "error" | "info" }>>([]);
+  const toastIdRef = useRef(0);
 
   function showToast(message: string, type: "success" | "error" | "info" = "info") {
-    const id = `${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
+    toastIdRef.current += 1;
+    const id = `toast-${toastIdRef.current}`;
     setToasts(t => [...t, { id, message, type }]);
     setTimeout(() => setToasts(t => t.filter(x => x.id !== id)), 4000);
   }
 
-  async function checkAuthAndLoad(p = page, ps = pageSize, q = query) {
+  const checkAuthAndLoad = useCallback(async (p = page, ps = pageSize, q = query) => {
     setLoading(true);
     const params = new URLSearchParams();
     params.set("page", String(p));
@@ -45,18 +47,15 @@ export default function AdminPage() {
     setStatusIndex(si);
     setLoggedIn(true);
     setLoading(false);
-  }
+  }, [page, pageSize, query]);
 
   useEffect(() => {
     if (sessionStatus === "authenticated") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       checkAuthAndLoad();
       return;
     }
-    if (sessionStatus === "unauthenticated") {
-      setLoggedIn(false);
-      setLoading(false);
-    }
-  }, [sessionStatus]);
+  }, [sessionStatus, checkAuthAndLoad]);
 
   // Server-side search & pagination — use rows as returned by the API
   const filtered = rows;

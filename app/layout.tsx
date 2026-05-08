@@ -3,8 +3,9 @@ import type { ReactNode } from "react"
 import { Footer } from "@/components/layout/Footer"
 import { Navbar } from "@/components/layout/Navbar"
 import { Providers } from "./providers"
-import "@/index.css"
+import "../src/index.css"
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   title: "Ionnetix Technologies",
   description: "Connecting Ideas. Delivering Innovation.",

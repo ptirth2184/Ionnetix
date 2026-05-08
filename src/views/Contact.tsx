@@ -22,14 +22,6 @@ const contactSchema = z.object({
   honeypot: z.string().default(""),
 })
 
-const serviceLabels: Record<ContactFormData["service"], string> = {
-  web: "Web Development",
-  marketing: "Digital Marketing",
-  "app-development": "App Development",
-  ai: "Website Maintenance",
-  other: "Other",
-}
-
 type ContactFormData = z.input<typeof contactSchema>
 
 export default function Contact() {
