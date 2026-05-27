@@ -118,7 +118,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Phone Number</h3>
-                      <p className="text-muted-foreground mt-1">+91 88662 93636<br />Mon-Fri, 9am to 6pm PST</p>
+                      <p className="text-muted-foreground mt-1">+91 88662 93636<br/></p>
                     </div>
                   </div>
 

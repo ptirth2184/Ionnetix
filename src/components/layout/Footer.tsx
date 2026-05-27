@@ -1,5 +1,34 @@
 import Link from "next/link"
-// social icons use inline SVGs in this file; no lucide imports required
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      className={className}
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="currentColor" strokeWidth="1" />
+    </svg>
+  )
+}
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg 
+      viewBox="0 0 24 24" 
+      fill="currentColor" 
+      className={className}
+    >
+      <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.76.46 3.42 1.26 4.88L2 22l5.3-1.28c1.4.78 3.02 1.24 4.7 1.24 5.52 0 10-4.48 10-10.004C22.004 6.48 17.52 2 12.004 2zm.004 1.66c4.6 0 8.34 3.74 8.34 8.34a8.3 8.3 0 0 1-8.34 8.34c-1.48 0-2.88-.38-4.1-1.08l-.3-.18-3.08.74.76-3-.2-.3a8.27 8.27 0 0 1-1.42-4.52c0-4.6 3.74-8.34 8.34-8.34zm-3.6 3.42c-.22 0-.46.06-.66.16-.36.18-.62.5-.72.9-.22.84.14 2.14.88 3.32 1.04 1.66 2.5 3 4.14 3.78.8.38 1.66.52 2.38.2.42-.18.72-.52.82-.96l.32-1.34c.06-.28-.08-.56-.34-.68l-1.68-.84c-.26-.14-.58-.06-.74.16l-.54.68c-.68-.34-1.32-.98-1.66-1.66l.68-.54c.22-.16.3-.48.16-.74l-.84-1.68c-.12-.26-.4-.4-.68-.34l-.32.08c-.06 0-.12.04-.18.04z" />
+    </svg>
+  )
+}
 
 export function Footer() {
   return (
@@ -20,32 +49,23 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Follow Us</h3>
             <div className="flex items-center space-x-3">
-              <Link href="/not-found" aria-label="Instagram" className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:bg-secondary/10 hover:text-primary transition-colors">
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" strokeWidth="1.5" />
-                  <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5" />
-                  <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" />
-                </svg>
+              <Link 
+                href="https://www.instagram.com/ionnetixtechnologies?igsh=MXcyNDc5YW5seW5vcA==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram" 
+                className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:bg-secondary/10 hover:text-primary transition-colors"
+              >
+                <InstagramIcon className="h-5 w-5" aria-hidden />
               </Link>
-              <Link href="/not-found" aria-label="LinkedIn" className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:bg-secondary/10 hover:text-primary transition-colors">
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" strokeWidth="1.5" />
-                  <rect x="6" y="10" width="2" height="7" fill="currentColor" />
-                  <path d="M8 10v7" stroke="currentColor" strokeWidth="1.5" />
-                  <rect x="11" y="7" width="2" height="10" fill="currentColor" />
-                  <path d="M11 7c1 0 1.5-.5 2-1.5" stroke="currentColor" strokeWidth="1.5" />
-                </svg>
-              </Link>
-              <Link href="/not-found" aria-label="WhatsApp" className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:bg-secondary/10 hover:text-primary transition-colors">
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <path d="M21 12a9 9 0 10-2.5 6.1L22 22l-3.9-1.4A9 9 0 0021 12z" stroke="currentColor" strokeWidth="1.5" />
-                  <path d="M16.5 14.5c-.3-.2-1.7-.8-2-.9-.3-.1-.6-.2-.9.2s-1 .9-1.2 1.1c-.2.2-.4.3-.7.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.7.1-.2.3-.6.5-.9.2-.3.2-.5.3-.8.1-.3 0-.6-.1-.8-.1-.2-.9-2-1.2-2.6-.3-.6-.6-.5-.9-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.8.5C6 6.5 6 7 6 7.5c0 .5.3 1.1.4 1.3.1.2.4.4.6.7.2.3.3.4.4.6.1.2 0 .4-.1.6-.1.2-.6.9-.9 1.2-.3.3-.5.5-.7.7-.2.2-.1.5.1.8.2.3 1.2 2 2.6 3.2 1.4 1.2 2.9 1.6 3.6 1.8.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.3-.7.3-1.2.2-1.3-.1-.1-.3-.2-.6-.4z" stroke="currentColor" strokeWidth="0.6" />
-                </svg>
-              </Link>
-              <Link href="/not-found" aria-label="Facebook" className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:bg-secondary/10 hover:text-primary transition-colors">
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <path d="M15 8h2.5V5.5H15c-1.4 0-2.5 1-2.5 2.5V11H10v2.5h2.5V21H15v-7.5H17l.5-2.5H15V8z" fill="currentColor" />
-                </svg>
+              <Link 
+                href="https://wa.me/918866293636" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="WhatsApp" 
+                className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:bg-secondary/10 hover:text-primary transition-colors"
+              >
+                <WhatsAppIcon className="h-5 w-5" aria-hidden />
               </Link>
             </div>
           </div>
