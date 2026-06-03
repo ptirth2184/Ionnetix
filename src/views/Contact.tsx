@@ -13,10 +13,14 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { useState } from "react"
 
+const PHONE_REGEX = /^[1-9]\d{9}$/
+
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
-  phone: z.string().min(10, "Phone number must be at least 10 digits"),
+  phone: z
+    .string()
+    .regex(PHONE_REGEX, "Phone number must be 10 digits and cannot start with 0"),
   service: z.enum(["web", "marketing", "app-development", "ai", "other"]),
   message: z.string().min(10, "Message must be at least 10 characters"),
   honeypot: z.string().default(""),
@@ -208,6 +212,10 @@ export default function Contact() {
                         <Input
                           id="phone"
                           type="tel"
+                          inputMode="numeric"
+                          maxLength={10}
+                          pattern="[1-9][0-9]{9}"
+                          title="Enter a 10-digit phone number that does not start with 0"
                           {...register("phone")}
                           className={`bg-muted/50 focus:bg-background transition-colors ${
                             errors.phone ? "border-red-500" : ""

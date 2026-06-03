@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
 import { google } from "googleapis"
 
+const PHONE_REGEX = /^[1-9]\d{9}$/
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -15,6 +17,14 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !phone || !service || !message) {
       return NextResponse.json(
         { error: "Missing required fields" },
+        { status: 400 }
+      )
+    }
+
+    const normalizedPhone = String(phone).trim()
+    if (!PHONE_REGEX.test(normalizedPhone)) {
+      return NextResponse.json(
+        { error: "Invalid phone number format" },
         { status: 400 }
       )
     }
@@ -42,7 +52,7 @@ export async function POST(request: NextRequest) {
             new Date().toISOString(),
             name,
             email,
-            phone,
+            normalizedPhone,
             service,
             message,
           ],
