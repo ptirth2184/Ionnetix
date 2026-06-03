@@ -36,12 +36,10 @@ export function Footer() {
       <div className="container px-4 md:px-8 max-w-7xl mx-auto py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-tr from-primary to-secondary">
-                <div className="h-3 w-3 rounded-full bg-background" />
-              </div>
-              <span className="font-bold text-lg tracking-tight text-primary">IONNETIX</span>
-            </div>
+            <Link href="/" className="inline-flex items-center space-x-3" aria-label="Ionnetix home">
+              <img src="/favicon.png" alt="Ionnetix favicon" className="h-12 w-12 object-contain" />
+              <span className="font-bold text-xl tracking-tight text-primary">Ionnetix</span>
+            </Link>
             <p className="text-sm text-muted-foreground">
               Connecting Ideas. Delivering Innovation. We provide end-to-end IT solutions for businesses.
             </p>
