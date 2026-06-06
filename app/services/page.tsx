@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Services from "@/views/Services"
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
 	title: "Services",
 	description:
