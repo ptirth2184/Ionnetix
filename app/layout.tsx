@@ -2,10 +2,11 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import { Footer } from "@/components/layout/Footer"
 import { Navbar } from "@/components/layout/Navbar"
+import { getSiteUrl } from "@/lib/site-url"
 import { Providers } from "./providers"
 import "../src/index.css"
 
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://ionnetix.com").replace(/\/$/, "")
+const siteUrl = getSiteUrl()
 const siteName = "Ionnetix Technologies"
 const defaultTitle = "IT Services, Automation, and Digital Solutions"
 const defaultDescription = "Ionnetix Technologies helps businesses grow with modern IT services, automation, and digital product solutions."

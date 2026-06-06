@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Services from "@/views/Services"
+import { getSiteUrl } from "@/lib/site-url"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 	},
 }
 
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://ionnetix.com").replace(/\/$/, "")
+const siteUrl = getSiteUrl()
 
 const serviceSchema = {
 	"@context": "https://schema.org",
