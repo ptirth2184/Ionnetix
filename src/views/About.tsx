@@ -11,10 +11,10 @@ export default function About() {
       <PageHero
         title={
           <>
-            About <span className="text-secondary">Ionnetix</span>
+            About <span className="text-secondary">Ionnetix Technologies</span>
           </>
         }
-        description="We are a team of passionate technologists dedicated to connecting ideas and delivering innovation for businesses worldwide."
+        description="Ionnetix Technologies is an IT services company focused on web development, app development, digital marketing, and practical business technology solutions."
         primaryAction={{ label: "Our Services", to: "/services" }}
         secondaryAction={{ label: "Contact Us", to: "/contact" }}
       />
@@ -28,15 +28,15 @@ export default function About() {
             transition={{ duration: 1.5, ease: "easeOut" }}
             viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+              <h2 className="text-3xl font-bold mb-6">Our Mission in IT Services</h2>
               <p className="text-muted-foreground mb-4">
-                At Ionnetix Technologies, our mission is to empower businesses by delivering cutting-edge, scalable, and secure technology solutions. We believe that technology should be an enabler, not a hurdle.
+                At Ionnetix Technologies, our mission is to help businesses grow with scalable, secure, and search-friendly technology solutions. We believe technology should make it easier to attract customers, improve operations, and create measurable value.
               </p>
               <p className="text-muted-foreground mb-4">
-                Founded with a vision to bridge the gap between complex business problems and intuitive digital solutions, we have consistently pushed the boundaries of what's possible. Our end-to-end services ensure that from concept to deployment, your project is in expert hands.
+                Founded to bridge the gap between business problems and practical digital solutions, we deliver end-to-end services that support everything from concept and design to deployment and ongoing optimization.
               </p>
               <p className="text-muted-foreground">
-                We don't just write code; we build digital experiences that resonate with users and drive tangible business growth.
+                We don't just write code; we build digital experiences that help brands improve online visibility, reach the right audience, and drive sustainable growth.
               </p>
             </motion.div>
             <motion.div 

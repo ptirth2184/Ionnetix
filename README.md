@@ -47,6 +47,15 @@ You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-re
 
 ```js
 // eslint.config.js
+
+## SEO Checklist
+
+- Keep `NEXT_PUBLIC_SITE_URL` set to the live canonical domain before every deployment.
+- Update page metadata when adding or changing pages, especially the title, description, and canonical URL.
+- Add JSON-LD for new services, landing pages, or major content sections when they introduce a clear entity.
+- Keep `app/sitemap.ts` and `app/robots.ts` aligned with any new public routes.
+- Avoid indexing internal pages such as admin, login, or utility routes.
+- Make sure important pages use descriptive H1s and service-specific copy that matches real search intent.
 import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
 

@@ -13,11 +13,11 @@ export default function Home() {
       <PageHero
         title={
           <>
-            Connecting Ideas. <br className="hidden md:inline" />
-            <span className="text-secondary">Delivering Innovation.</span>
+            IT Services That <br className="hidden md:inline" />
+            <span className="text-secondary">Move Your Business Forward.</span>
           </>
         }
-        description="We provide cutting-edge software development and IT consulting services to help your business thrive in the digital age."
+        description="Ionnetix Technologies provides web development, app development, digital marketing, and IT consulting services to help businesses grow online."
         primaryAction={{ label: "Explore Our Services", to: "/services" }}
         secondaryAction={{ label: "Contact Us", to: "/contact" }}
       />
@@ -26,8 +26,8 @@ export default function Home() {
       <section className="py-20 bg-background">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Why Choose Ionnetix?</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">We combine technical expertise with a deep understanding of your business goals to deliver exceptional results.</p>
+            <h2 className="text-3xl font-bold mb-4">Why Choose Ionnetix for IT Services?</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">We combine technical expertise with business-focused strategy to deliver web development, automation, and digital solutions that support measurable growth.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -65,8 +65,8 @@ export default function Home() {
         <div className="container px-4 md:px-8 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div className="max-w-2xl mb-6 md:mb-0">
-              <h2 className="text-3xl font-bold mb-4">Our Services</h2>
-              <p className="text-muted-foreground">Comprehensive technology solutions designed to accelerate your growth and streamline your operations.</p>
+              <h2 className="text-3xl font-bold mb-4">Web Development, App Development, and Digital Marketing</h2>
+              <p className="text-muted-foreground">Our technology solutions are designed to accelerate growth, improve visibility in search engines, and streamline your operations.</p>
             </div>
             <Button variant="ghost" asChild className="group text-primary">
               <Link href="/services">
@@ -78,9 +78,9 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Web Development", desc: "Fast, responsive, and visually stunning websites." },
-              { title: "Digital Marketing", desc: "Data-driven strategies to grow your online presence." },
-              { title: "App Development", desc: "Innovative mobile applications for iOS and Android." }
+              { title: "Web Development", desc: "Fast, responsive, and SEO-friendly websites built for performance and conversions." },
+              { title: "Digital Marketing", desc: "Data-driven SEO and online growth strategies to increase visibility and reach." },
+              { title: "App Development", desc: "Innovative mobile applications for iOS and Android that scale with your business." }
             ].map((service, i) => (
               <motion.div
                 key={i}
@@ -114,8 +114,8 @@ export default function Home() {
           <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-secondary/20 to-transparent mix-blend-overlay"></div>
         </div>
         <div className="container relative z-10 px-4 md:px-8 max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to build something great?</h2>
-          <p className="text-xl text-primary-foreground/80 mb-10">Let's discuss how Ionnetix Technologies can help you achieve your business goals.</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to grow with better IT services?</h2>
+          <p className="text-xl text-primary-foreground/80 mb-10">Let's discuss how Ionnetix Technologies can help you strengthen your website, search visibility, and digital presence.</p>
           <Button size="lg" asChild className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-8 py-6 text-lg">
             <Link href="/contact">Let's Talk</Link>
           </Button>
