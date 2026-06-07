@@ -6,15 +6,61 @@ import { ArrowRight, Users, Target, ShieldCheck, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PageHero } from "@/components/sections/PageHero"
+import { getSiteUrl } from "@/lib/site-url"
+
+const siteUrl = getSiteUrl()
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      name: "Ionnetix Technologies",
+      url: siteUrl,
+      description:
+        "Ionnetix Technologies provides web development, app development, digital marketing, and IT consulting services.",
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What does Ionnetix Technologies do?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ionnetix Technologies provides web development, app development, digital marketing, and IT consulting services for businesses.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is Ionnetix focused on SEO-friendly websites?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Ionnetix builds SEO-friendly websites designed to improve visibility, performance, and conversions.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How can I contact Ionnetix?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You can contact Ionnetix through the website contact page to discuss your project requirements.",
+          },
+        },
+      ],
+    },
+  ],
+}
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} />
       <PageHero
         title={
           <>
-            IT Services That <br className="hidden md:inline" />
-            <span className="text-secondary">Move Your Business Forward.</span>
+            Ionnetix Technologies <br className="hidden md:inline" />
+            <span className="text-secondary">IT Services That Move Your Business Forward.</span>
           </>
         }
         description="Ionnetix Technologies provides web development, app development, digital marketing, and IT consulting services to help businesses grow online."
@@ -119,6 +165,41 @@ export default function Home() {
           <Button size="lg" asChild className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-8 py-6 text-lg">
             <Link href="/contact">Let's Talk</Link>
           </Button>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-background">
+        <div className="container px-4 md:px-8 max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Ionnetix FAQ</h2>
+            <p className="text-muted-foreground">A quick answer to the most common questions people search before reaching out.</p>
+          </div>
+          <div className="space-y-4">
+            {[
+              {
+                question: "What does Ionnetix Technologies do?",
+                answer: "Ionnetix Technologies provides web development, app development, digital marketing, and IT consulting services for businesses.",
+              },
+              {
+                question: "Can Ionnetix build SEO-friendly websites?",
+                answer: "Yes. We build SEO-friendly websites focused on speed, structure, and content that can rank and convert better.",
+              },
+              {
+                question: "How do I contact Ionnetix for a project?",
+                answer: "Use the contact page on the website and share your project details. We’ll review the request and get back to you.",
+              },
+            ].map((item) => (
+              <Card key={item.question} className="border-border/50">
+                <CardHeader>
+                  <CardTitle className="text-lg">{item.question}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{item.answer}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
     </div>

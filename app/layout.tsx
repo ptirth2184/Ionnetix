@@ -25,13 +25,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${siteName} | ${defaultTitle}`,
     description: defaultDescription,
-    url: "/",
+    url: siteUrl,
     siteName,
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/favicon.png",
+        url: `${siteUrl}/favicon.png`,
       },
     ],
   },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteName} | ${defaultTitle}`,
     description: defaultDescription,
-    images: ["/favicon.png"],
+    images: [`${siteUrl}/favicon.png`],
   },
   robots: {
     index: true,
@@ -59,10 +59,31 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: siteName,
-  url: siteUrl,
-  logo: `${siteUrl}/favicon.png`,
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      name: siteName,
+      url: siteUrl,
+      logo: `${siteUrl}/favicon.png`,
+      image: `${siteUrl}/favicon.png`,
+      description: defaultDescription,
+      telephone: "+91 88662 93636",
+      email: "ionnetixhr@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Ahmedabad",
+        addressRegion: "Gujarat",
+        addressCountry: "IN",
+      },
+      areaServed: ["IN", "Global"],
+      sameAs: ["https://www.instagram.com/ionnetixtechnologies?igsh=MXcyNDc5YW5seW5vcA=="],
+    },
+    {
+      "@type": "WebSite",
+      name: siteName,
+      url: siteUrl,
+    },
+  ],
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

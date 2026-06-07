@@ -4,15 +4,31 @@ import { getSiteUrl } from "@/lib/site-url"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
-	title: "Services",
+	title: "Ionnetix Services | Web Development, App Development, Digital Marketing",
 	description:
 		"Explore Ionnetix web development, app development, digital marketing, and website maintenance services tailored to your business goals.",
+	keywords: [
+		"Ionnetix services",
+		"web development",
+		"app development",
+		"digital marketing",
+		"website maintenance",
+	],
 	alternates: {
 		canonical: "/services",
 	},
 }
 
 const siteUrl = getSiteUrl()
+
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	itemListElement: [
+		{ "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+		{ "@type": "ListItem", position: 2, name: "Services", item: `${siteUrl}/services` },
+	],
+}
 
 const serviceSchema = {
 	"@context": "https://schema.org",
@@ -109,6 +125,10 @@ export default function ServicesPage() {
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+			/>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
 			/>
 			<Services />
 		</>

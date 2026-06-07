@@ -79,10 +79,10 @@ export default function Contact() {
       <PageHero
         title={
           <>
-            Get In <span className="text-secondary">Touch</span>
+            Contact <span className="text-secondary">Ionnetix Technologies</span>
           </>
         }
-        description="Have a project in mind or need assistance? We're here to help. Reach out to us today."
+        description="Have a web development, app development, or digital marketing project in mind? Reach out to Ionnetix Technologies and we’ll get back to you within 24 hours."
         primaryAction={{ label: "View Services", to: "/services" }}
         secondaryAction={{ label: "About Us", to: "/about" }}
       />
@@ -100,9 +100,9 @@ export default function Contact() {
               className="space-y-10 lg:pt-14"
             >
               <div>
-                <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
+                <h2 className="text-3xl font-bold mb-6">Ionnetix Contact Information</h2>
                 <p className="text-muted-foreground mb-8">
-                  Fill out the form and our team will get back to you within 24 hours. Alternatively, you can use the information below to reach us directly.
+                  Fill out the form and the Ionnetix team will get back to you within 24 hours. Alternatively, use the details below to reach us directly about your next project.
                 </p>
 
                 <div className="space-y-6">
@@ -112,7 +112,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Office Address</h3>
-                      <p className="text-muted-foreground mt-1">Ahmedabad, Gujarat</p>
+                      <p className="text-muted-foreground mt-1">Ahmedabad, Gujarat, India</p>
                     </div>
                   </div>
                   
@@ -146,7 +146,7 @@ export default function Contact() {
             >
               <Card className="border-border/50 shadow-lg shadow-primary/5">
                 <CardContent className="p-8 md:p-10">
-                  <h2 className="text-2xl font-bold mb-8">Send us a Message</h2>
+                  <h2 className="text-2xl font-bold mb-8">Send Ionnetix a Message</h2>
                   
                   {submitStatus.type && (
                     <motion.div

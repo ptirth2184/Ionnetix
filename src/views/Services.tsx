@@ -13,10 +13,10 @@ export default function Services() {
       <PageHero
         title={
           <>
-            Our <span className="text-secondary">Services</span>
+            Ionnetix <span className="text-secondary">Services</span>
           </>
         }
-        description="Comprehensive, end-to-end technology solutions tailored to accelerate your business growth."
+        description="Comprehensive web development, app development, digital marketing, and website maintenance services tailored to accelerate your business growth."
         primaryAction={{ label: "Get in Touch", to: "/contact" }}
         secondaryAction={{ label: "About Us", to: "/about" }}
       />

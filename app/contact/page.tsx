@@ -1,14 +1,73 @@
 import type { Metadata } from "next"
 import Contact from "@/views/Contact"
+import { getSiteUrl } from "@/lib/site-url"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
-	title: "Contact",
+	title: "Contact Ionnetix Technologies | Request a Project Quote",
 	description:
 		"Contact Ionnetix Technologies to discuss your next IT, automation, or digital transformation project.",
+	keywords: ["contact Ionnetix", "project quote", "IT services contact", "Ionnetix contact"],
 	alternates: {
 		canonical: "/contact",
 	},
 }
 
-export default Contact
+const siteUrl = getSiteUrl()
+
+const contactSchema = {
+	"@context": "https://schema.org",
+	"@type": "ContactPage",
+	name: "Contact Ionnetix Technologies",
+	url: `${siteUrl}/contact`,
+	mainEntity: {
+		"@type": "Organization",
+		name: "Ionnetix Technologies",
+		url: siteUrl,
+		contactPoint: [
+			{
+				"@type": "ContactPoint",
+				contactType: "sales",
+				email: "ionnetixhr@gmail.com",
+				telephone: "+91 88662 93636",
+				areaServed: "IN",
+				availableLanguage: ["en"],
+			},
+		],
+	},
+}
+
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	itemListElement: [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Home",
+			item: siteUrl,
+		},
+		{
+			"@type": "ListItem",
+			position: 2,
+			name: "Contact",
+			item: `${siteUrl}/contact`,
+		},
+	],
+}
+
+export default function ContactPage() {
+	return (
+		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+			/>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+			/>
+			<Contact />
+		</>
+	)
+}

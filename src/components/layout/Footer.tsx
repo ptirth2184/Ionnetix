@@ -41,7 +41,7 @@ export function Footer() {
               <span className="font-bold text-xl tracking-tight text-primary">Ionnetix</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Connecting Ideas. Delivering Innovation. We provide end-to-end IT solutions for businesses.
+              Ionnetix Technologies provides web development, app development, digital marketing, and IT consulting services for businesses.
             </p>
           </div>
           <div>
