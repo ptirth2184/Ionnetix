@@ -4,5 +4,5 @@ export function getSiteUrl() {
 		return configuredUrl.replace(/\/$/, "")
 	}
 
-	return "https://ionnetix.com"
+	return "https://www.ionnetix.com"
 }
