@@ -21,7 +21,7 @@ const contactSchema = z.object({
   phone: z
     .string()
     .regex(PHONE_REGEX, "Phone number must be 10 digits and cannot start with 0"),
-  service: z.enum(["web", "marketing", "app-development", "ai", "other"]),
+  service: z.enum(["web", "marketing", "app-development", "maintenance", "other"]),
   message: z.string().min(10, "Message must be at least 10 characters"),
   honeypot: z.string().default(""),
 })
@@ -241,7 +241,7 @@ export default function Contact() {
                           <option value="web">Web Development</option>
                           <option value="marketing">Digital Marketing</option>
                           <option value="app-development">App Development</option>
-                          <option value="ai">Website Maintenance</option>
+                          <option value="maintenance">Website Maintenance</option>
                           <option value="other">Other</option>
                         </select>
                         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-muted-foreground">

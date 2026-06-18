@@ -4,15 +4,19 @@ import { getSiteUrl } from "@/lib/site-url"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
-	title: "Ionnetix Services | Web Development, App Development, Digital Marketing",
+	title: "Ionnetix Services | Web Development, App Development & Digital Marketing in Ahmedabad",
 	description:
-		"Explore Ionnetix web development, app development, digital marketing, and website maintenance services tailored to your business goals.",
+		"Explore Ionnetix web development, mobile app development, digital marketing, and website maintenance services in Ahmedabad. Custom solutions built to grow your business online.",
 	keywords: [
 		"Ionnetix services",
-		"web development",
-		"app development",
-		"digital marketing",
-		"website maintenance",
+		"web development Ahmedabad",
+		"app development Ahmedabad",
+		"digital marketing services Ahmedabad",
+		"website maintenance India",
+		"custom website development Gujarat",
+		"mobile app development India",
+		"SEO services Ahmedabad",
+		"hire web developers Ahmedabad",
 	],
 	alternates: {
 		canonical: "/services",

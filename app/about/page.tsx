@@ -4,10 +4,17 @@ import { getSiteUrl } from "@/lib/site-url"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
-	title: "About Ionnetix Technologies | IT Services Company",
+	title: "About Ionnetix Technologies | IT Services Company in Ahmedabad",
 	description:
-		"Learn about Ionnetix Technologies, our mission, and how we deliver practical, future-ready digital solutions.",
-	keywords: ["Ionnetix", "about Ionnetix", "IT services company", "digital solutions"],
+		"Ionnetix Technologies is a young, driven IT services startup in Ahmedabad building modern websites, mobile apps, and digital marketing campaigns for businesses across India.",
+	keywords: [
+		"about Ionnetix",
+		"Ionnetix Technologies",
+		"IT services company Ahmedabad",
+		"web development startup India",
+		"digital solutions Ahmedabad",
+		"tech startup Gujarat",
+	],
 	alternates: {
 		canonical: "/about",
 	},

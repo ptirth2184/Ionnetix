@@ -15,27 +15,42 @@ const faqItems = [
   {
     question: "What services does Ionnetix Technologies offer?",
     answer:
-      "Ionnetix Technologies offers web development, app development, digital marketing, and IT consulting services for businesses that want to grow online.",
+      "We offer four core services: custom web development (using React and Next.js), mobile app development (iOS and Android with Flutter), digital marketing (SEO, social media, and content strategy), and ongoing website maintenance. Everything is tailored to your business goals.",
   },
   {
     question: "Do you build SEO-friendly websites for businesses?",
     answer:
-      "Yes. We build SEO-friendly websites with fast performance, strong structure, and content that supports better search visibility and conversions.",
+      "Yes. Every website we build is optimized for Google from day one proper heading structure, fast page load speeds, mobile responsiveness, meta tags, structured data, and clean URLs. We don't treat SEO as an add-on; it's baked into our development process.",
   },
   {
     question: "Do you provide mobile app development for iOS and Android?",
     answer:
-      "Yes. We develop mobile apps for iOS and Android that are designed to support your product goals, user experience, and long-term growth.",
+      "Yes. We build cross-platform mobile apps using Flutter and React Native, which means your app works on both iOS and Android from a single codebase. This saves time and cost while delivering a native-quality experience.",
   },
   {
     question: "Can Ionnetix help with SEO and digital marketing?",
     answer:
-      "Yes. We provide digital marketing support that includes SEO-focused content, visibility improvements, and growth strategy for your website.",
+      "Absolutely. We handle keyword research, on-page SEO, Google Business Profile setup, social media management, and content creation. Our goal is to increase your online visibility and bring in customers who are actively searching for your services.",
   },
   {
     question: "How do I request a quote or contact Ionnetix?",
     answer:
-      "Use the contact page to share your project details and goals. We’ll review your request and get back to you with the next steps.",
+      "Head to our contact page and fill out the form with your project details. You can also reach us directly at +91 88662 93636 or ionnetixhr@gmail.com. We respond within 24 hours.",
+  },
+  {
+    question: "Is Ionnetix Technologies based in Ahmedabad?",
+    answer:
+      "Yes. Ionnetix Technologies is based in Ahmedabad, Gujarat, India. We work with businesses locally in Ahmedabad and remotely across India and internationally.",
+  },
+  {
+    question: "How long does it take to build a website or app?",
+    answer:
+      "A standard business website typically takes 2–4 weeks. Custom web applications take 4–8 weeks depending on complexity. Mobile apps usually take 6–12 weeks. We'll give you a clear timeline during our initial consultation.",
+  },
+  {
+    question: "Do you offer website maintenance after launch?",
+    answer:
+      "Yes. We offer ongoing website maintenance packages that include security updates, performance monitoring, content updates, backups, and bug fixes. You focus on your business while we keep your website running smoothly.",
   },
 ]
 
@@ -44,10 +59,10 @@ const faqItems = [
     "@graph": [
       {
         "@type": "WebPage",
-        name: "Ionnetix Technologies",
+        name: "Ionnetix Technologies Web Development & IT Services in Ahmedabad",
         url: siteUrl,
         description:
-          "Ionnetix Technologies provides web development, app development, digital marketing, and IT consulting services.",
+          "Ionnetix Technologies helps businesses across India build high-performing websites, scalable mobile apps, and data-driven digital marketing campaigns.",
       },
       {
         "@type": "FAQPage",
@@ -72,29 +87,29 @@ const faqItems = [
         <PageHero
           title={
             <>
-              Ionnetix Technologies <br className="hidden md:inline" />
-              <span className="text-secondary">IT Services That Move Your Business Forward.</span>
+              Web Development &amp; IT Services <br className="hidden md:inline" />
+              <span className="text-secondary">in Ahmedabad That Deliver Real Results.</span>
             </>
           }
-          description="Ionnetix Technologies provides web development, app development, digital marketing, and IT consulting services to help businesses grow online."
-          primaryAction={{ label: "Explore Our Services", to: "/services" }}
-          secondaryAction={{ label: "Contact Us", to: "/contact" }}
+          description="We help businesses across India build high-performing websites, scalable mobile apps, and data-driven digital marketing campaigns that attract real customers. Built by Ionnetix Technologies."
+          primaryAction={{ label: "See What We Build", to: "/services" }}
+          secondaryAction={{ label: "Get a Free Consultation", to: "/contact" }}
         />
 
         <section className="py-20 bg-background">
           <div className="container px-4 md:px-8 max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">Why Choose Ionnetix for IT Services?</h2>
+              <h2 className="text-3xl font-bold mb-4">Why Businesses in Ahmedabad Choose Ionnetix</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                We combine technical expertise with business-focused strategy to deliver web development, automation, and digital solutions that support measurable growth.
+                We're a young, hungry team of developers and marketers who build with the latest tech React, Next.js, Node.js, Flutter and treat every client project like it's our own product.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: Users, title: "Expert Team", desc: "Highly skilled professionals with years of industry experience." },
-                { icon: Target, title: "Client-Focused", desc: "Your success is our priority. We tailor solutions to your needs." },
-                { icon: ShieldCheck, title: "End-to-End Solutions", desc: "From concept to deployment and ongoing support." },
-                { icon: Zap, title: "Proven Results", desc: "A track record of delivering innovative and scalable tech." },
+                { icon: Users, title: "Modern Tech Stack", desc: "We build with React, Next.js, Node.js, and Flutter frameworks trusted by startups and enterprises worldwide. No outdated tools, no shortcuts." },
+                { icon: Target, title: "Built Around Your Goals", desc: "Every project starts with understanding your business, audience, and KPIs. We build what moves the needle for you not a one-size-fits-all template." },
+                { icon: ShieldCheck, title: "End-to-End Delivery", desc: "From wireframes and UI design to development, SEO setup, and launch one team handles everything so nothing gets lost in translation." },
+                { icon: Zap, title: "Fast & SEO-Optimized", desc: "Every website we ship is optimized for speed, mobile responsiveness, and Google search rankings from day one. Performance is not an afterthought." },
               ].map((feature, i) => (
                 <motion.div
                   key={i}
@@ -124,9 +139,9 @@ const faqItems = [
           <div className="container px-4 md:px-8 max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-end mb-12">
               <div className="max-w-2xl mb-6 md:mb-0">
-                <h2 className="text-3xl font-bold mb-4">Web Development, App Development, and Digital Marketing</h2>
+                <h2 className="text-3xl font-bold mb-4">What We Build for Businesses in India</h2>
                 <p className="text-muted-foreground">
-                  Our technology solutions are designed to accelerate growth, improve visibility in search engines, and streamline your operations.
+                  From custom websites that rank on Google to mobile apps your customers will love we handle the tech so you can focus on growth.
                 </p>
               </div>
               <Button variant="ghost" asChild className="group text-primary">
@@ -139,27 +154,37 @@ const faqItems = [
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { title: "Web Development", desc: "Fast, responsive, and SEO-friendly websites built for performance and conversions." },
-                { title: "Digital Marketing", desc: "Data-driven SEO and online growth strategies to increase visibility and reach." },
-                { title: "App Development", desc: "Innovative mobile applications for iOS and Android that scale with your business." },
+                { title: "Web Development", desc: "We design and develop fast, responsive websites using React and Next.js optimized for Google rankings, mobile users, and conversions. Whether you need a business website, a landing page, or a custom web app, we build it to perform." },
+                { title: "Digital Marketing", desc: "Get found by the right customers. We run SEO campaigns, manage social media, and build content strategies that increase your online visibility and drive real leads not vanity metrics." },
+                { title: "App Development", desc: "We build cross-platform mobile apps for iOS and Android using Flutter and React Native. From concept to App Store launch, we handle design, development, testing, and post-launch support." },
               ].map((service, i) => (
                 <motion.div key={i} whileHover={{ y: -5 }} className="group">
                   <Card className="h-full overflow-hidden border-border/50">
                     <div className="h-48 bg-muted relative overflow-hidden">
                       <img
                         src={`https://images.unsplash.com/photo-${i === 0 ? "1498050108023-c5249f4df085" : i === 1 ? "1460925895917-afdab827c52f" : "1551650975-87deedd944c3"}?w=800&auto=format&fit=crop&q=60`}
-                        alt={service.title}
+                        alt={`${service.title} services by Ionnetix Technologies in Ahmedabad`}
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <h3 className="absolute bottom-4 left-6 text-xl font-bold text-white">{service.title}</h3>
                     </div>
                     <CardContent className="pt-6">
-                      <p className="text-muted-foreground">{service.desc}</p>
+                      <p className="text-muted-foreground mb-4">{service.desc}</p>
+                      <Link href="/services" className="text-sm font-medium text-secondary hover:underline inline-flex items-center gap-1">
+                        Learn more <ArrowRight className="h-3 w-3" />
+                      </Link>
                     </CardContent>
                   </Card>
                 </motion.div>
               ))}
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-muted-foreground">
+                Want to know who's behind the work?{" "}
+                <Link href="/about" className="text-secondary font-medium hover:underline">Learn about our team →</Link>
+              </p>
             </div>
           </div>
         </section>
@@ -169,12 +194,12 @@ const faqItems = [
             <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-secondary/20 to-transparent mix-blend-overlay" />
           </div>
           <div className="container relative z-10 px-4 md:px-8 max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to grow with better IT services?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Got an Idea? Let's Build It Together.</h2>
             <p className="text-xl text-primary-foreground/80 mb-10">
-              Let’s discuss how Ionnetix Technologies can help you strengthen your website, search visibility, and digital presence.
+              Tell us what you need a website, an app, a marketing strategy and we'll put together a free, no-obligation proposal within 48 hours.
             </p>
             <Button size="lg" asChild className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-8 py-6 text-lg">
-              <Link href="/contact">Let's Talk</Link>
+              <Link href="/contact">Get Your Free Proposal</Link>
             </Button>
           </div>
         </section>
@@ -182,8 +207,8 @@ const faqItems = [
         <section className="py-20 bg-background">
           <div className="container px-4 md:px-8 max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Ionnetix FAQ</h2>
-              <p className="text-muted-foreground">A quick answer to the most common questions people search before reaching out.</p>
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions About Ionnetix</h2>
+              <p className="text-muted-foreground">Quick answers to the questions businesses ask before working with us.</p>
             </div>
             <div className="space-y-4">
               {faqItems.map((item, index) => {
@@ -195,12 +220,13 @@ const faqItems = [
                       type="button"
                       onClick={() => setOpenFaq(isOpen ? -1 : index)}
                       aria-expanded={isOpen}
+                      aria-controls={`faq-panel-${index}`}
                       className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-muted/40"
                     >
                       <span className="text-lg font-semibold">{item.question}</span>
                       <ChevronDown className={`h-5 w-5 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
                     </button>
-                    <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                    <div id={`faq-panel-${index}`} role="region" className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                       <div className="overflow-hidden">
                         <CardContent className="px-6 pb-6 pt-0">
                           <p className="text-muted-foreground">{item.answer}</p>

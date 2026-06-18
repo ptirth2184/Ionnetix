@@ -4,10 +4,17 @@ import { getSiteUrl } from "@/lib/site-url"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
-	title: "Contact Ionnetix Technologies | Request a Project Quote",
+	title: "Contact Ionnetix Technologies | Get a Free Project Quote in Ahmedabad",
 	description:
-		"Contact Ionnetix Technologies to discuss your next IT, automation, or digital transformation project.",
-	keywords: ["contact Ionnetix", "project quote", "IT services contact", "Ionnetix contact"],
+		"Contact Ionnetix Technologies in Ahmedabad to discuss your web development, app development, or digital marketing project. We respond within 24 hours.",
+	keywords: [
+		"contact Ionnetix",
+		"Ionnetix contact",
+		"project quote Ahmedabad",
+		"IT services contact India",
+		"hire web developer Ahmedabad",
+		"free consultation web development",
+	],
 	alternates: {
 		canonical: "/contact",
 	},
