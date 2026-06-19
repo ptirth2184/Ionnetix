@@ -15,22 +15,22 @@ const faqItems = [
   {
     question: "What services does Ionnetix Technologies offer?",
     answer:
-      "We offer four core services: custom web development (using React and Next.js), mobile app development (iOS and Android with Flutter), digital marketing (SEO, social media, and content strategy), and ongoing website maintenance. Everything is tailored to your business goals.",
+      "We offer core digital services: custom web development (using React and Next.js), logo design, reels and content creation, social media handling, and ongoing website maintenance. Everything is tailored to your brand goals.",
   },
   {
     question: "Do you build SEO-friendly websites for businesses?",
     answer:
-      "Yes. Every website we build is optimized for Google from day one proper heading structure, fast page load speeds, mobile responsiveness, meta tags, structured data, and clean URLs. We don't treat SEO as an add-on; it's baked into our development process.",
+      "Yes. Every website we build is optimized for Google from day one with proper heading structure, fast page load speeds, mobile responsiveness, meta tags, structured data, and clean URLs. We don't treat SEO as an add-on; it's baked into our development process.",
   },
   {
-    question: "Do you provide mobile app development for iOS and Android?",
+    question: "Can you manage our social media and create reels?",
     answer:
-      "Yes. We build cross-platform mobile apps using Flutter and React Native, which means your app works on both iOS and Android from a single codebase. This saves time and cost while delivering a native-quality experience.",
+      "Yes. We offer end-to-end social media handling, including strategy, content creation, high-quality reels production, and community management to build your brand presence online.",
   },
   {
-    question: "Can Ionnetix help with SEO and digital marketing?",
+    question: "Do you offer logo design and branding services?",
     answer:
-      "Absolutely. We handle keyword research, on-page SEO, Google Business Profile setup, social media management, and content creation. Our goal is to increase your online visibility and bring in customers who are actively searching for your services.",
+      "Absolutely. We craft memorable visual identities and custom logos that resonate with your target audience and stand out in your industry.",
   },
   {
     question: "How do I request a quote or contact Ionnetix?",
@@ -43,9 +43,9 @@ const faqItems = [
       "Yes. Ionnetix Technologies is based in Ahmedabad, Gujarat, India. We work with businesses locally in Ahmedabad and remotely across India and internationally.",
   },
   {
-    question: "How long does it take to build a website or app?",
+    question: "How long does it take to complete a project?",
     answer:
-      "A standard business website typically takes 2–4 weeks. Custom web applications take 4–8 weeks depending on complexity. Mobile apps usually take 6–12 weeks. We'll give you a clear timeline during our initial consultation.",
+      "A standard business website typically takes 2–4 weeks. Logo design and initial content strategy usually take 1-2 weeks. We'll give you a clear timeline during our initial consultation.",
   },
   {
     question: "Do you offer website maintenance after launch?",
@@ -62,7 +62,7 @@ const faqItems = [
         name: "Ionnetix Technologies Web Development & IT Services in Ahmedabad",
         url: siteUrl,
         description:
-          "Ionnetix Technologies helps businesses across India build high-performing websites, scalable mobile apps, and data-driven digital marketing campaigns.",
+          "Ionnetix Technologies helps businesses across India build high-performing websites, craft memorable brand identities, and drive engagement through viral reels and strategic social media management.",
       },
       {
         "@type": "FAQPage",
@@ -91,7 +91,7 @@ const faqItems = [
               <span className="text-secondary">in Ahmedabad That Deliver Real Results.</span>
             </>
           }
-          description="We help businesses across India build high-performing websites, scalable mobile apps, and data-driven digital marketing campaigns that attract real customers. Built by Ionnetix Technologies."
+          description="We are a specialized digital agency in Ahmedabad. We engineer high-performance websites using Next.js, craft memorable brand identities, and drive engagement through viral reels and strategic social media management."
           primaryAction={{ label: "See What We Build", to: "/services" }}
           secondaryAction={{ label: "Get a Free Consultation", to: "/contact" }}
         />
@@ -101,15 +101,15 @@ const faqItems = [
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-4">Why Businesses in Ahmedabad Choose Ionnetix</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                We're a young, hungry team of developers and marketers who build with the latest tech React, Next.js, Node.js, Flutter and treat every client project like it's our own product.
+                We are a specialized team of software engineers and digital strategists in Ahmedabad. We treat every client project like our own, ensuring measurable ROI and brand growth.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: Users, title: "Modern Tech Stack", desc: "We build with React, Next.js, Node.js, and Flutter frameworks trusted by startups and enterprises worldwide. No outdated tools, no shortcuts." },
-                { icon: Target, title: "Built Around Your Goals", desc: "Every project starts with understanding your business, audience, and KPIs. We build what moves the needle for you not a one-size-fits-all template." },
-                { icon: ShieldCheck, title: "End-to-End Delivery", desc: "From wireframes and UI design to development, SEO setup, and launch one team handles everything so nothing gets lost in translation." },
-                { icon: Zap, title: "Fast & SEO-Optimized", desc: "Every website we ship is optimized for speed, mobile responsiveness, and Google search rankings from day one. Performance is not an afterthought." },
+                { icon: Users, title: "Modern Tech Stack", desc: "We build websites with React and Next.js—frameworks trusted by startups and enterprises worldwide. No outdated tools, no shortcuts." },
+                { icon: Target, title: "Built Around Your Goals", desc: "Every project starts with understanding your business, audience, and KPIs. We build what moves the needle for you—not a one-size-fits-all template." },
+                { icon: ShieldCheck, title: "End-to-End Delivery", desc: "From logo design and UI/UX to web development and social media strategy, one team handles everything so nothing gets lost in translation." },
+                { icon: Zap, title: "Creative & Fast", desc: "We merge stunning visual design with high-speed web performance. Your brand will look incredible and rank well on Google." },
               ].map((feature, i) => (
                 <motion.div
                   key={i}
@@ -141,7 +141,7 @@ const faqItems = [
               <div className="max-w-2xl mb-6 md:mb-0">
                 <h2 className="text-3xl font-bold mb-4">What We Build for Businesses in India</h2>
                 <p className="text-muted-foreground">
-                  From custom websites that rank on Google to mobile apps your customers will love we handle the tech so you can focus on growth.
+                  From custom websites that rank on Google to viral reels that build your audience—we handle your digital presence so you can focus on growth.
                 </p>
               </div>
               <Button variant="ghost" asChild className="group text-primary">
@@ -154,9 +154,9 @@ const faqItems = [
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { title: "Web Development", desc: "We design and develop fast, responsive websites using React and Next.js optimized for Google rankings, mobile users, and conversions. Whether you need a business website, a landing page, or a custom web app, we build it to perform." },
-                { title: "Digital Marketing", desc: "Get found by the right customers. We run SEO campaigns, manage social media, and build content strategies that increase your online visibility and drive real leads not vanity metrics." },
-                { title: "App Development", desc: "We build cross-platform mobile apps for iOS and Android using Flutter and React Native. From concept to App Store launch, we handle design, development, testing, and post-launch support." },
+                { title: "Web Development", desc: "We engineer fast, responsive websites using React and Next.js. Whether you need a corporate site, landing page, or complex web app, we build it to perform and convert visitors." },
+                { title: "Logo & Brand Design", desc: "Stand out in a crowded market. We craft memorable visual identities, custom logos, and brand guidelines that resonate perfectly with your target demographic." },
+                { title: "Social Media & Reels", desc: "Get found and drive engagement. We produce high-quality video content, viral reels, and manage your social profiles to build community and generate leads." },
               ].map((service, i) => (
                 <motion.div key={i} whileHover={{ y: -5 }} className="group">
                   <Card className="h-full overflow-hidden border-border/50">
@@ -196,7 +196,7 @@ const faqItems = [
           <div className="container relative z-10 px-4 md:px-8 max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Got an Idea? Let's Build It Together.</h2>
             <p className="text-xl text-primary-foreground/80 mb-10">
-              Tell us what you need a website, an app, a marketing strategy and we'll put together a free, no-obligation proposal within 48 hours.
+              Tell us what you need—a high-performing website, a new logo, or a social media strategy—and we'll put together a free, no-obligation proposal within 48 hours.
             </p>
             <Button size="lg" asChild className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-8 py-6 text-lg">
               <Link href="/contact">Get Your Free Proposal</Link>

@@ -4,18 +4,18 @@ import { getSiteUrl } from "@/lib/site-url"
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
-	title: "Ionnetix Services | Web Development, App Development & Digital Marketing in Ahmedabad",
+	title: "Ionnetix Services | Web Development, Design & Social Media in Ahmedabad",
 	description:
-		"Explore Ionnetix web development, mobile app development, digital marketing, and website maintenance services in Ahmedabad. Custom solutions built to grow your business online.",
+		"Explore Ionnetix web development, logo design, reels creation, social media handling, and website maintenance services in Ahmedabad. Creative solutions built to grow your business online.",
 	keywords: [
 		"Ionnetix services",
 		"web development Ahmedabad",
-		"app development Ahmedabad",
-		"digital marketing services Ahmedabad",
+		"logo design Ahmedabad",
+		"social media marketing Ahmedabad",
+		"reels content creation agency India",
 		"website maintenance India",
 		"custom website development Gujarat",
-		"mobile app development India",
-		"SEO services Ahmedabad",
+		"Instagram management agency Ahmedabad",
 		"hire web developers Ahmedabad",
 	],
 	alternates: {
@@ -75,15 +75,15 @@ const serviceSchema = {
 					position: 2,
 					item: {
 						"@type": "Service",
-						name: "Digital Marketing",
-						serviceType: "SEO and online growth strategy",
+						name: "Logo Design",
+						serviceType: "Brand Identity and Logo Design",
 						provider: {
 							"@type": "Organization",
 							name: "Ionnetix Technologies",
 							url: siteUrl,
 						},
 						description:
-							"Data-driven SEO and online growth strategies to increase visibility and reach.",
+							"Crafting memorable visual identities and custom logos that stand out in your industry.",
 					},
 				},
 				{
@@ -91,20 +91,36 @@ const serviceSchema = {
 					position: 3,
 					item: {
 						"@type": "Service",
-						name: "App Development",
-						serviceType: "Mobile app development",
+						name: "Reels & Content Creation",
+						serviceType: "Video Production and Content Creation",
 						provider: {
 							"@type": "Organization",
 							name: "Ionnetix Technologies",
 							url: siteUrl,
 						},
 						description:
-							"Innovative mobile applications for iOS and Android that scale with your business.",
+							"Producing high-quality video content and engaging reels that capture attention.",
 					},
 				},
 				{
 					"@type": "ListItem",
 					position: 4,
+					item: {
+						"@type": "Service",
+						name: "Social Media Handling",
+						serviceType: "Social Media Management",
+						provider: {
+							"@type": "Organization",
+							name: "Ionnetix Technologies",
+							url: siteUrl,
+						},
+						description:
+							"End-to-end management of your social profiles to build community and generate leads.",
+					},
+				},
+				{
+					"@type": "ListItem",
+					position: 5,
 					item: {
 						"@type": "Service",
 						name: "Website Maintenance",

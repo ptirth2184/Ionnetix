@@ -15,8 +15,8 @@ const inter = Inter({
 
 const siteUrl = getSiteUrl()
 const siteName = "Ionnetix Technologies"
-const defaultTitle = "Web Development & IT Services in Ahmedabad"
-const defaultDescription = "Ionnetix Technologies is an Ahmedabad-based IT services company offering web development, app development, digital marketing, and website maintenance for businesses across India."
+const defaultTitle = "Web Development, Logo Design & Social Media Agency in Ahmedabad"
+const defaultDescription = "Ionnetix Technologies is an Ahmedabad-based digital agency offering custom web development, logo design, reels & content creation, and social media handling for businesses across India."
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og/default.png`,
         width: 1200,
         height: 630,
-        alt: "Ionnetix Technologies — Web Development & IT Services in Ahmedabad",
+        alt: "Ionnetix Technologies — Web Development, Design & Social Media Agency in Ahmedabad",
       },
     ],
   },
@@ -85,6 +85,8 @@ const organizationSchema = {
         addressRegion: "Gujarat",
         addressCountry: "IN",
       },
+      priceRange: "$$",
+      openingHours: "Mo-Fr 09:00-18:00",
       areaServed: ["IN", "Global"],
       sameAs: ["https://www.instagram.com/ionnetixtechnologies?igsh=MXcyNDc5YW5seW5vcA=="],
     },

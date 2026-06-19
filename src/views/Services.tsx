@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Code2, TrendingUp, Server, Bot, Search, PenTool, Terminal, CheckCircle } from "lucide-react"
+import { Code2, Palette, Video, Share2, Bot, Search, PenTool, Terminal, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PageHero } from "@/components/sections/PageHero"
@@ -16,7 +16,7 @@ export default function Services() {
             Ionnetix <span className="text-secondary">Services</span>
           </>
         }
-        description="Comprehensive web development, app development, digital marketing, and website maintenance services tailored to accelerate your business growth."
+        description="Comprehensive web development, logo design, reels creation, social media handling, and website maintenance services tailored to accelerate your brand growth."
         primaryAction={{ label: "Get in Touch", to: "/contact" }}
         secondaryAction={{ label: "About Us", to: "/about" }}
       />
@@ -28,17 +28,22 @@ export default function Services() {
               {
                 icon: Code2,
                 title: "Web Development",
-                desc: "Design and build fast, responsive, and visually stunning websites tailored to your business needs and brand identity. We utilize modern frameworks to ensure scalability and performance."
+                desc: "Design and build fast, responsive, and visually stunning websites using React and Next.js. We ensure your website is optimized for performance and Google rankings."
               },
               {
-                icon: TrendingUp,
-                title: "Digital Marketing",
-                desc: "Grow your online presence with data-driven strategies including SEO, social media, and targeted ad campaigns. We help you reach the right audience at the right time."
+                icon: Palette,
+                title: "Logo Design",
+                desc: "Crafting memorable visual identities and custom logos that resonate with your target audience and stand out in a crowded market."
               },
               {
-                icon: Server,
-                title: "App Development Services",
-                desc: "Reliable, scalable app development solutions to help you build modern digital products that perform smoothly and grow with your business."
+                icon: Video,
+                title: "Reels & Content Creation",
+                desc: "Producing high-quality video content and engaging reels that capture attention, build your audience, and drive real conversions."
+              },
+              {
+                icon: Share2,
+                title: "Social Media Handling",
+                desc: "End-to-end management of your social profiles including strategy, content scheduling, and community building to generate consistent leads."
               },
               {
                 icon: Bot,

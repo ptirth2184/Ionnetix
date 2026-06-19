@@ -14,7 +14,7 @@ export default function About() {
             About <span className="text-secondary">Ionnetix Technologies</span>
           </>
         }
-        description="Ionnetix Technologies is an IT services company focused on web development, app development, digital marketing, and practical business technology solutions."
+        description="Ionnetix Technologies is a specialized digital agency focused on web development, logo design, reels & content creation, and comprehensive social media handling."
         primaryAction={{ label: "Our Services", to: "/services" }}
         secondaryAction={{ label: "Contact Us", to: "/contact" }}
       />
@@ -30,13 +30,13 @@ export default function About() {
             >
               <h2 className="text-3xl font-bold mb-6">Our Mission in IT Services</h2>
               <p className="text-muted-foreground mb-4">
-                At Ionnetix Technologies, our mission is to help businesses grow with scalable, secure, and search-friendly technology solutions. We believe technology should make it easier to attract customers, improve operations, and create measurable value.
+                At Ionnetix Technologies, our mission is to elevate brands through high-performance web development and scroll-stopping creative content. We believe your digital presence should actively generate leads, not just act as an online brochure.
               </p>
               <p className="text-muted-foreground mb-4">
-                Founded to bridge the gap between business problems and practical digital solutions, we deliver end-to-end services that support everything from concept and design to deployment and ongoing optimization.
+                From engineering fast, SEO-optimized React websites to producing viral Instagram reels and crafting memorable brand identities, we deliver end-to-end solutions that capture attention and drive revenue.
               </p>
               <p className="text-muted-foreground">
-                We don't just write code; we build digital experiences that help brands improve online visibility, reach the right audience, and drive sustainable growth.
+                We develop technical solutions that solve real business bottlenecks and design creative strategies that build authentic communities around your brand.
               </p>
             </motion.div>
             <motion.div 
