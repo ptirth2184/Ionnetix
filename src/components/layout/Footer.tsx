@@ -30,6 +30,24 @@ function WhatsAppIcon({ className }: { className?: string }) {
   )
 }
 
+function LinkedInIcon({ className }: { className?: string }) {
+  return (
+    <svg 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      className={className}
+    >
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  )
+}
+
 export function Footer() {
   return (
     <footer className="border-t bg-muted/40">
@@ -64,6 +82,15 @@ export function Footer() {
                 className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:bg-secondary/10 hover:text-primary transition-colors"
               >
                 <WhatsAppIcon className="h-5 w-5" aria-hidden />
+              </Link>
+              <Link 
+                href="https://www.linkedin.com/company/ionnetix-technologies/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="LinkedIn" 
+                className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:bg-secondary/10 hover:text-primary transition-colors"
+              >
+                <LinkedInIcon className="h-5 w-5" aria-hidden />
               </Link>
             </div>
           </div>
