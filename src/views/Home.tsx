@@ -176,13 +176,6 @@ const faqItems = [
                 </motion.div>
               ))}
             </div>
-
-            <div className="text-center mt-10">
-              <p className="text-muted-foreground">
-                Want to know who's behind the work?{" "}
-                <Link href="/about" className="text-secondary font-medium hover:underline">Learn about our team →</Link>
-              </p>
-            </div>
           </div>
         </section>
 
