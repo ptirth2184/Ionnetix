@@ -171,9 +171,6 @@ const faqItems = [
                     </div>
                     <CardContent className="pt-6">
                       <p className="text-muted-foreground mb-4">{service.desc}</p>
-                      <Link href="/services" className="text-sm font-medium text-secondary hover:underline inline-flex items-center gap-1">
-                        Learn more <ArrowRight className="h-3 w-3" />
-                      </Link>
                     </CardContent>
                   </Card>
                 </motion.div>

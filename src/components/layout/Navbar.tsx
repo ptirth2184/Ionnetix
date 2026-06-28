@@ -25,17 +25,23 @@ export function Navbar() {
           <img src={logoImage.src} alt="Ionnetix Logo" className="h-16 md:h-20 w-auto object-contain transform scale-110 md:scale-125 origin-left" />
         </Link>
         <div className="hidden md:flex items-center space-x-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.path}
-              className={`text-sm font-medium transition-colors hover:text-secondary ${
-                pathname === link.path ? "text-secondary font-semibold" : "text-foreground/80"
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname ? (pathname === link.path || (link.path !== "/" && pathname.startsWith(link.path))) : false;
+            return (
+              <Link
+                key={link.name}
+                href={link.path}
+                className={`relative py-2 text-sm font-medium transition-colors hover:text-secondary ${
+                  isActive ? "text-secondary font-semibold" : "text-foreground/80"
+                }`}
+              >
+                {link.name}
+                {isActive && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary rounded-full" />
+                )}
+              </Link>
+            )
+          })}
           <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href="/contact">Get a Free Consultation</Link>
           </Button>
@@ -51,18 +57,24 @@ export function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden border-t border-border/80 bg-background">
           <div className="flex flex-col space-y-4 px-4 py-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.path}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-lg font-medium transition-colors hover:text-secondary ${
-                  pathname === link.path ? "text-secondary font-semibold" : "text-foreground/80"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname ? (pathname === link.path || (link.path !== "/" && pathname.startsWith(link.path))) : false;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-lg font-medium transition-colors hover:text-secondary flex items-center justify-between ${
+                    isActive ? "text-secondary font-semibold" : "text-foreground/80"
+                  }`}
+                >
+                  <span>{link.name}</span>
+                  {isActive && (
+                    <span className="h-2 w-2 rounded-full bg-secondary animate-pulse" />
+                  )}
+                </Link>
+              )
+            })}
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full mt-4" onClick={() => setIsMobileMenuOpen(false)}>
               <Link href="/contact">Get a Free Consultation</Link>
             </Button>
